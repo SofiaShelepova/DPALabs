@@ -1,32 +1,20 @@
-class Person:
-    def __init__(self, name):
-        self.__name = name  # устанавливаем имя
-        self.__age = 20  # устанавливаем возраст
+class Triangle:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
 
-    @property
-    def age(self):
-        return self.__age
-
-    @age.setter
-    def age(self, age):
-        if 18 < age < 110:
-            self.__age = age
-        else:
-            print("Недопустимый возраст")
-
-    @property
-    def name(self):
-        return self.__name
-
-    def display_info(self):
-        print(f"Имя: {self.__name}\tВозраст: {self.__age}")
+    def get_perimetr(self):
+        return self.a + self.b + self.c
 
 
-class Employee(Person):
-    def work(self):
-        print(f"{self.name} works")
+class Parallelogram:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def get_perimetr(self):
+        return 2 * (self.a + self.b)
 
 
-tom = Employee("Tom")
-tom.work()
-tom.display_info()
+
